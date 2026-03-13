@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Dollar Rupee
+    </h2>
+    Enter Dollar: &nbsp;<input type="number" id="num" oninput="calculation()">
+    <p id="output"></p>
+    <script>
+        function calculation(){
+            let a =( num.value);
+            output.innerText = "Rupees: "+(a*91.08);
+        }
+    </script>
+    <h2>Character count</h2>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All DOM Selectors Example</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="mainTitle">College Portal</h2>
+
+    <p class="info">Computer Science Department</p>
+    <p class="highlight">Electronics Department</p>
+
+    <p>General Notice</p>
+
+    <input type="text" name="studentName" placeholder="Enter Name">
+    <input type="text" name="studentName" placeholder="Enter Roll Number">
+
+    <br><br>
+    <button onclick="selectElements()">Test All Selectors</button>
+    <script>
+        function selectElements() {
+            let title=document.getElementById("mainTitle");
+            title.style.color="blue";
+            let departments = document.getElementsByClassName("info");
+            departments[0].style.color="green";
+            let department= document.getElementsByClassName("highlight");
+            department[0].style.fontWeight="strong";
+            let paragraphs=document.getElementsByTagName("p");
+            paragraphs[2].style.color="red";
+            let namefields = document.getElementsByName("studentName");
+            namefields[0].value="HANI";
+            let firstinfo=document.querySelector(".info");
+            firstinfo.classList.add("highlight");
+            let allinfo=document.querySelectorAll(".info");
+            allinfo.forEach(function(item)
+             {
+                item.style.fontWeight="bold";
+            });
+        }
+    </script>
+    </body>
+    </html>

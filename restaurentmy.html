@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Bank Account App</title> 
+</head>
+<body>
+
+    <h2>Bank Account System</h2>
+
+    <p><strong>Account Holder:</strong> <span id="holder"></span></p>
+    <p><strong>Account Number:</strong> <span id="number"></span></p>
+    <p><strong>Balance:</strong> ₹<span id="balance"></span></p>
+
+    <hr>
+
+    <h3>Deposit Money</h3>
+    <input type="number" id="depositAmount" placeholder="Enter amount">
+    <button onclick="depositMoney()">Deposit</button>
+
+    <h3>Withdraw Money</h3>
+    <input type="number" id="withdrawAmount" placeholder="Enter amount">
+    <button onclick="withdrawMoney()">Withdraw</button>
+
+    <p id="message" style="color:blue;"></p>
+    <script>
+        function deposit

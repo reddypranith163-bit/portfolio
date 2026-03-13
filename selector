@@ -1,0 +1,26 @@
+     <!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p{
+                color:navy;
+                
+            }
+            h1,b{
+                Background-color: yellow;
+            }
+            #main title {
+                color:red;
+                text-align:centre;
+            }
+        </style>
+        <body>
+            <h1> is about tha paragraph</h1>
+            <p> this is a normal paragraph </p>
+            <p> this is <b> bold</b></p>
+            <h2 id="main-title">selectors</h2>
+            
+        </body>
+    </head>
+</html>
+

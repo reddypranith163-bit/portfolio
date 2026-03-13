@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Calculator</title>
+    </head>
+    <body>
+        <h2>Student Result Calculator</h2>
+        <form>
+            <label>Student name</label>
+            <input type="text" id="name"><br><br>
+            <label>Number of Subjects</label>
+            <input type="number" id="subjects"><br><br>
+            <button type="button" onclick="Calculateresult()">Calculate Result</button>
+        </form>
+
+        <!-- Output area -->
+        <h3 id="output"></h3>
+
+        <script>
+            function Calculateresult() {
+                let name = document.getElementById("name").value;
+                let subjects = parseInt(document.getElementById("subjects").value);
+                let total = 0;
+                let i = 1;
+
+                // DO-WHILE LOOP
+                do {
+                    let mark = parseInt(prompt("Enter marks for subject " + i));
+                    total = total + mark;
+                    i++;
+                } while (i <= subjects);
+
+                let average = total / subjects;
+
+                // IF-ELSE
+                let result;
+                if (average >= 40) {
+                    result = "Pass";
+                } else {
+                    result = "Fail";
+                }
+
+                // FOR LOOP - list subjects
+                let subjectlist = "";
+                for (let j = 1; j <= subjects; j++) {
+                    subjectlist += "Subject" + j + " ";
+                }
+
+                // WHILE LOOP
+                let count = 1;
+                let message = "";
+                while (count <= 1) {
+                    message = "Result Generated Successfully";
+                    count++;
+                }
+
+                // DISPLAY
+                document.getElementById("output").innerHTML =
+                    "Student Name: " + name + "<br>" +
+                    "Subjects: " + subjectlist + "<br>" +
+                    "Total Marks: " + total + "<br>" +
+                    "Average: " + average + "<br>" +
+                    "Result: " + result + "<br>" +
+                    message;
+            }
+        </script>
+    </body>
+</html>

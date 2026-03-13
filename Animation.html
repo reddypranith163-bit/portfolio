@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Transitions & Animations – All in One</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    hr {
+      margin: 30px 0;
+
+
+
+    }
+    .text-transition{
+        font-size: 24px;
+        color: black;
+        display: inline-block;
+        transition: color 0.5s , letter-spacing 0.5s, transform 0.5s;
+    }
+    .text-transition:hover{
+        color: crimson;
+        letter-spacing: 4px;
+        transform: scale(1.2);
+    }
+     .btn{
+        background-color: #3498db;
+        color: white;
+        padding: 12px 25px;
+        width: fit-content;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.5s ease,transform 0.5s ease;
+    }
+    .btn:hover{
+        background-color: #2ecc71;
+        transform: scale(1.1);
+    }
+    .box{
+        width:  100px;
+        height: 100px;
+        background-color: #e74c3c;
+        margin-top: 15px;
+        transition-property: width,background-color;
+        transition-duration: 1.5s;
+    }
+    .box:hover{
+        width: 220px;
+        background-color: #f1c40f;
+    }
+    .circle{
+        width: 50px;
+        height: 50px;
+        background-color: #9b59b6;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 20px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes bounce{
+        0% { top: 0;background-color: #9b59b6}
+        50% {top: 100px; background-color: #8e44ad;}
+        100% {top: 0; background-color: #9b59b6;}
+    }
+    .moving-text{
+        font-size: 24px;
+        color: darkblue;
+        position: relative;
+        animation-name: moveText;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes moveText{
+        from{
+            left:0%;
+        }
+        to{
+            left:100%;
+        }
+
+    }
+    .square{
+        width: 60px;
+        height: 60px;
+        background-color: #1abc9c;
+        position: relative;
+        margin-top: 20px;
+        animation-name: movecolour;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        
+    }
+    @keyframes movecolour{
+        0% {left: 0;background-color: #1abc9c;}
+        25% {left: 100px;background-color: #16a085;}
+        50% {left: 200px;background-color: #f39c12;}
+        75% {left: 100px;background-color: #e67e22;}
+        100% {left: 0;background-color: #1abc9c;}
+    }
+</style>
+</head>
+<body>
+
+  <h2>1. Text Transition Example</h2>
+  <p class="text-transition">Hover over this text</p>
+
+  <hr>
+
+  <h2>2. Transition Shorthand (Button)</h2>
+  <div class="btn">Hover Button</div>
+
+  <hr>
+
+  <h2>3. transition-property & transition-duration</h2>
+  <div class="box"></div>
+
+  <hr>
+
+  <h2>4. CSS Animation using @keyframes (Bounce)</h2>
+  <div class="circle"></div>
+
+  <hr>
+
+  <h2>5. CSS Animation using @keyframes (Move & Color)</h2>
+  <div class="square"></div>
+
+  <h2>6. Transition (shorthand) Example</h2>
+  <div class="button">Hover me!</div>
+  <hr>
+
+  <h2>7. Transition-property & Transition-duration Example</h2>
+  <div class="box"></div>
+  <hr>
+
+  <h2>8. Moving Text from left to right </h2>
+  <div class="moving-text"> Text moves from left to right</div>
+
+  <h2>CSS Animation Properties Demo</h2>
+  <p>Hover over the box to pause the animation.</p>
+  <div class="boxanimate">This</div>
+
+  <h2>CSS Animation Properties Demo</h2>
+  <p>Hover over the box to pause the animation.</p>
+  <div class="boxtransform">This</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Transitions & Animations – All in One</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+    .text-transition{
+        font-size: 24px;
+        color: black;
+        display: inline-block;
+        transition: color 0.5s , letter-spacing 0.5s, transform 0.5s;
+    }
+    .text-transition:hover{
+        color: crimson;
+        letter-spacing: 4px;
+        transform: scale(1.2);
+    }
+    .btn{
+        background-color: #3498db;
+        color: white;
+        padding: 12px 25px;
+        width: fit-content;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.5s ease,transform 0.5s ease;
+    }
+    .btn:hover{
+        background-color: #2ecc71;
+        transform: scale(1.1);
+    }
+    .box{
+        width:  100px;
+        height: 100px;
+        background-color: #e74c3c;
+        margin-top: 15px;
+        transition-property: width,background-color;
+        transition-duration: 1.5s;
+    }
+    .box:hover{
+        width: 220px;
+        background-color: #f1c40f;
+    }
+    .circle{
+        width: 50px;
+        height: 50px;
+        background-color: #9b59b6;
+        border-radius: 50%;
+        position: relative;
+        margin-top: 20px;
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes bounce{
+        0% { top: 0;background-color: #9b59b6}
+        50% {top: 100px; background-color: #8e44ad;}
+        100% {top: 0; background-color: #9b59b6;}
+    }
+    .moving-text{
+        font-size: 24px;
+        color: darkblue;
+        position: relative;
+        animation-name: moveText;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes moveText{
+        from{
+            left:0%;
+        }
+        to{
+            left:100%;
+        }
+
+    }
+    .square{
+        width: 60px;
+        height: 60px;
+        background-color: #1abc9c;
+        position: relative;
+        margin-top: 20px;
+        animation-name: movecolour;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+        
+    }
+    @keyframes movecolour{
+        0% {left: 0;background-color: #1abc9c;}
+        25% {left: 100px;background-color: #16a085;}
+        50% {left: 200px;background-color: #f39c12;}
+        75% {left: 100px;background-color: #e67e22;}
+        100% {left: 0;background-color: #1abc9c;}
+    }
+   .boxanimate{
+    width: 100px;
+    height: 100px;
+    background-color: steelblue;
+    position: relative;
+    animation-name: movebox;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-iteration-count: infinite;
+}
+
+.boxanimate:hover{
+    animation-play-state: paused;
+}
+
+@keyframes movebox{
+    from{
+        left: 0;
+        background-color: steelblue;
+    }
+    to{
+        left: 1200px;
+        background-color: tomato;
+    }
+}
+
+    .boxtransform{
+        background-color: purple;
+        width: 10%;
+        height: 40px;
+        animation: move 2s infinite;
+        animation-direction: alternate;
+    }
+    @keyframes move{
+        from {transform: translateX(0);}
+        to {transform: translateX(200px);}
+    }
+</style>
+</head>
+<body>
+
+  <h2>1. Text Transition Example</h2>
+  <p class="text-transition">Hover over this text</p>
+
+  <hr>
+
+  <h2>2. Transition Shorthand (Button)</h2>
+  <div class="btn">Hover Button</div>
+
+  <hr>
+
+  <h2>3. transition-property & transition-duration</h2>
+  <div class="box"></div>
+
+  <hr>
+
+  <h2>4. CSS Animation using @keyframes (Bounce)</h2>
+  <div class="circle"></div>
+
+  <hr>
+
+  <h2>5. CSS Animation using @keyframes (Move & Color)</h2>
+  <div class="square"></div>
+
+  <h2>6. Transition (shorthand) Example</h2>
+  <div class="button">Hover me!</div>
+  <hr>
+  <h2>7. Transition-property & Transition-duration Example</h2>
+  <div class="box"></div>
+  <hr>
+
+  <h2>8. Moving Text from left to right </h2>
+  <div class="moving-text"> Text moves from left to right</div>
+
+  <h2>CSS Animation Properties Demo</h2>
+  <p>Hover over the box to pause the animation.</p>
+  <div class="boxanimate">This</div>
+
+  <h2>CSS Animation Properties Demo</h2>
+  <p>Hover over the box to pause the animation.</p>
+  <div class="boxtransform">This</div>
+
+</body>
+</html>

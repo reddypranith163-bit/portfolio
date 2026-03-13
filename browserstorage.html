@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Browser Storage Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Portal</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+    <br>
+
+    <button onclick="saveLocal()">Save (localStorage)</button>
+    <button onclick="saveSession()">Save (sessionStorage)</button>
+    <button onclick="clearData()">Clear</button>
+
+    <div id="output"></div>
+    <script>
+        //When page loads, check stored data
+        window.onload=function(){
+            let localName=localStorage.getItem("studentName");//student name shld be visile when page is loaded
+            let sessionName=sessionStorage.getItem("studentName");
+            if(localName){
+                document.getElementById("output").textContent="Welcome back (localStorage): "+localName;
+            }
+            if(sessionName){
+                document.getElementById("output").textContent="Welcome (sessionStorage): "+sessionName;
+            };
+        }
+        function saveLocal(){
+            let name=document.getElementById("name").value;
+            localStorage.setItem("studentName", name);
+            document.getElementById("output").textContent="Saved in local Storage";
+        }
+
+        function saveSession(){
+            let name=document.getElementById("name").value;
+            sessionStorage.setItem("studentName", name);
+            document.getElementById("output").textContent="Saved in session Storage";
+        }
+
+        function clearData(){
+            localStorage.removeItem("studentName");
+            sessionStorage.removeItem("studentName");
+            document.getElementById("output").textContent="Storage Cleared!";
+        }
+    </script>

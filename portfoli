@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <h1>Pranith Reddy</h1>
+    <p>Java Developer | Web Learner | Problem Solver</p>
+    <hr>
+
+    <!-- About Section -->
+    <h2>About Me</h2>
+    <p>
+        Hello! I am Pranith Reddy, a passionate programmer currently learning 
+        Java, Data Structures, and Web Development. 
+        I enjoy building small projects and improving my coding skills.
+    </p>
+
+    <!-- Skills Section -->
+    <h2>Skills</h2>
+    <ul>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS (Basic)</li>
+        <li>Data Structures</li>
+    </ul>
+
+    <!-- Projects Section -->
+    <h2>Projects</h2
+    <ol>
+        <li>Insurance Policy Management System</li>
+        <li>Student Record Management</li>
+        <li>Sorting Algorithms Implementation</li>
+        </ol>
+
+    <!-- Education Section -->
+    <h2>Education</h2>
+    <table border="1">
+        <tr>
+            <th>Qualification</th>
+            <th>Year</th>
+        </tr>
+        <tr>
+            <td>B.Tech</td>
+            <td>2025</td>
+        </tr>
+    </table>
+
+    <!-- Contact Section -->
+    <h2>Contact Me</h2>
+    <form>
+        Name: <input type="text"><br><br>
+        Email: <input type="email"><br><br>
+        Message:<br>
+        <textarea rows="4" cols="30"></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+
+    <hr>
+    <p>© 2026  Abhi All Rights Reserved.</p>
+
+</body>
+</html>
